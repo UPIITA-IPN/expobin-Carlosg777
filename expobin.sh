@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 aee.py "$@"
+python3 aee.py 

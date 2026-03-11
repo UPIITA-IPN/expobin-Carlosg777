@@ -1,9 +1,6 @@
 import sys
 
 def exponenciacion_binaria(base, exponente, modulo):
-    """
-    Calcula (base^exponente) % modulo usando el método de exponenciación binaria.
-    """
     resultado = 1
     base = base % modulo
     while exponente > 0:
@@ -14,11 +11,14 @@ def exponenciacion_binaria(base, exponente, modulo):
     return resultado
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 4:
+    entrada = sys.stdin.read().split()
+    
+    if len(entrada) >= 3:
         try:
-            b = int(sys.argv[1])
-            e = int(sys.argv[2])
-            m = int(sys.argv[3])
+            b = int(entrada[0])
+            e = int(entrada[1])
+            m = int(entrada[2])
+            
             print(exponenciacion_binaria(b, e, m))
         except ValueError:
             pass
